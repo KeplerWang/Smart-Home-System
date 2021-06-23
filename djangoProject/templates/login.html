@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://v3.bootcss.com/examples/dashboard/ -->
+
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="shortcut icon" type="image/png" href="../static/img/favicon.ico"/>
+
+    <title>登录界面</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/dashboard.css" rel="stylesheet">
+    <link href="../static/my-style.css" rel="stylesheet">
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" >智能家居控制端</a>
+        </div>
+
+    </div>
+</nav>
+
+        <div class="col-sm-3 col-sm-offset-4 main">
+            <h4 class="page-header text-center">登陆</h4>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form class="content-wrap" role="form" action="/login/" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                                <input class="form-control" name="username" type="text" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+
+                                <input class="form-control" name="password" type="password" placeholder="Password">
+                        </div>
+                        <div style="display: none;">
+                                <input id="next" type="text" name="next_url" value="{{ next_url }}" />
+                        </div>
+                        {% if login_error_msg %}
+                        <div id="error-msg">
+                            <span style="color: rgba(255,53,49,0.8); font-family: cursive;">{{ login_error_msg }}</span>
+                        </div>
+                        {% endif %}
+                        <div class="action text-center">
+                            <button type="submit" href="{% url 'base' %}" class="btn btn-primary">登陆</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+<script src="/static/jquery-3.3.1.min.js"></script>
+	<script src="/static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+    <title>主界面</title>
+    <!--js-->
+	<script src="../static/bootstrap/js/jquery.min.js"></script>
+	<script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <!--添加bootstrap-->
+    <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!--添加favicon-->
+	<link rel="shortcut icon" type="image/png" href="../static/img/favicon.ico"/>
+	<!--block for head-->
+
+	<style>
+
+		/* header 绿色背景 */
+		.banner-green{
+			position: relative;
+            height:400px;
+            background-color: rgb(54, 46, 46);
+            color: #fff;
+			}
+
+		/* 导航条定位 */
+        .nav-position{
+        	padding-top:20px;
+    		background-color: rgb(26, 25, 25);
+    		border-bottom:0;
+    		margin-bottom:0;
+    		}
+
+		/* 设置导航条链接颜色为白色 */
+    	.navbar-default .navbar-nav > li > a {color: #f6f1f1;}
+
+		/*  内容区高为100%可以使footer置底部，前提是html,body也设置为高100% */
+		.content{
+					min-height: 100%;
+					height: 100%;
+					}
+
+
+
+		/* 页脚 */
+		.footer1{
+					background-color: rgb(57, 51, 51);
+					color: #ffffff;
+					line-height:1.6;
+					padding:30px;
+					font-weight:200;
+					
+
+					}
+
+		.footer2{
+
+					background-color: rgba(170, 38, 38, 0);
+					color: #fff;
+					padding:15px;
+					text-align:center;
+					font-weight:200;
+
+					}
+
+
+		html,body {	height: 100%; 
+			}
+
+		a{
+			color:#fff;
+		}
+
+        b{
+            padding-left: 20px;
+            margin-top: 15px;
+            float: left;
+        }
+
+
+	</style>
+
+
+
+</head>
+<body>
+<!--带导航的页头-->
+<header role="banner">
+	<div class="banner-green">
+		<!--导航条-->
+		<nav role="navigation" class="navbar navbar-static-top navbar-default nav-position">
+			<div class="container">
+				<!--brand && toggle-->
+                <div class="navbar-header">
+                    <b>智能家居控制端</b>
+					<button type="button" class="navbar-toggle collapsed navbar-right" data-toggle="collapse" data-target="#myheader" float="left" >
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!--nav links-->
+				<form class="collapse navbar-collapse" id="myheader" method="post">
+					<ul class="nav navbar-nav navbar-right ">
+						<li><a href={% url 'index' %}><span class="glyphicon glyphicon-user" id="home"></span>关于</a></li>
+						<li><a href={% url 'face' %}><span class="glyphicon glyphicon-camera" id="face"></span> 人脸比对 </a></li>
+						<li><a href={% url 'look' %}><span class="glyphicon glyphicon-eye-open" id="look"></span> 查看状态 </a></li>
+						<li><a href={% url 'off' %}><span class="glyphicon glyphicon-off" id="off"></span> 退出 </a></li>
+					</ul>
+				</form>
+			</div>
+		</nav>
+		<!--raspi简介-->
+		<div style="text-align:center;">
+			<h3 style="font-size:21px;text-shadow:-1px 1px 0 rgb(0,0,0);">华中科技大学-智能家居项目</h3>
+            <div>
+			<h3 style="font-size:21px;font-weight: 200;"> 王子辰 饶龙 侯梁博 </h3><br>
+            </div>
+
+            <div>
+                <p style="font-weight:200;">基于树莓派4B和Django的开发项目</p>
+            </div>
+            <div>
+                <p style="font-weight:200;">当前温度: {{ Temperature }} °C</p>
+                <p style="font-weight:200;">当前湿度: {{ Humidity }} %</p>
+            </div>
+
+		</div>
+	</div>
+</header>
+
+
+<!--内容区-->
+<main role="main">
+</main>
+
+
+<!--页脚-->
+<footer>
+	<div class="row footer1">
+		<!--空块-->
+		<div class="col-md-2"></div>
+		<div class="col-md-3" >
+            <h4>官方网站</h4>
+			<ul>
+				<li><a href="https://www.python.org/">Python.org</a></li>
+				<li><a href="https://www.raspberrypi.org/">树莓派官网</a></li>
+				<li><a href="https://www.djangoproject.com/">Django official website</a></li>
+				<li><a href="">Bootstrap中文网</a></li>
+				<li><a href="https://jquery.com">Jquery.com</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+            <h4>参考链接</h4>
+			<ul >
+				<li><a href="http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html">Raspberry Pi 安装指南</a></li>
+				<li><a href="http://www.cnblogs.com/vamei/archive/2012/10/10/2718229.html" >从树莓派开始玩电脑</a></li>
+				<li><a href=https://www.liaoxuefeng.com/wiki/1016959663602400>廖雪峰的Python教程</a></li>
+				<li><a href="http://elinux.org/RPi_GPIO_Code_Samples">RPi GPIO Code Samples</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+	
+</body>
+</html>

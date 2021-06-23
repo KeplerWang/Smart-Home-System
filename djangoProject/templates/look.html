@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>控制界面</title>
+    <link href="../static/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/dashboard.css" rel="stylesheet">
+    <link href="../static/my-style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../static/img/favicon.ico"/>
+<script>
+function func1(){
+	alert("已经开启该设备");
+}
+
+function func2(){
+    alert("已经关闭该设备");
+}
+function fun3(){
+    alert("切换成自动模式");
+}
+
+</script>
+<style>
+
+        #prat1{
+        width: 700px;
+        height: 300px;
+        background: rgba(191, 188, 184, 0);
+        margin-left: 120px;
+        }
+
+        #prat2{
+        width: 700px;
+        height: 300px;
+        background: rgba(191, 188, 184, 0);
+        margin-left: 120px;
+        margin-top: 40px;
+        }
+        #prat3{
+        width: 700px;
+        height: 270px;
+        background: rgba(191, 188, 184, 0);
+        margin-top: 60px;
+        margin-left: 120px;
+        }
+
+        #prat4{
+        width: 700px;
+        height: 300px;
+        background: rgba(191, 188, 184, 0);
+        float: left;
+        margin-top: 60px;
+        margin-left: 120px;
+        }
+        .close_button{
+            width:160px;
+            height:80px;
+            line-height:20px;
+            background-color:#333;
+            color:#fff;
+            border-radius: 4px;
+            border: 1px solid #333;
+            font-size:25px;
+            margin:10px;
+
+        }
+        .open_button{
+            width:160px;
+            height:80px;
+            line-height:20px;
+            background-color:#27aa60;
+            color:#fff;
+            border-radius: 4px;
+            border: 1px solid #27aa60;
+            font-size:25px;
+            margin:10px;
+
+        }
+        .mycenter{
+            background-color: #fff;
+            border-radius: 20px;
+            width: 920px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding-top: 40px;
+            margin: 20px auto auto;
+        }
+        .h5, h5 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .p{
+            font-size: 35px;
+            font-weight: 800;
+            align-content: center;
+            margin-left: 270px;
+            padding-top: 10px;
+            white-space:nowrap;
+        }
+        .navbar{
+            min-height: 100px;
+            margin-bottom: 20px;
+        }
+        .navbar-brand {
+            float: left;
+            height: 50px;
+            padding: 35px 15px;
+            font-size: 24px;
+            line-height: 20px;
+        }
+        .navbar-nav {
+            margin: -30px;
+            font-size: 24px;
+        }
+        .new_button{
+            width:100px;
+            height:70px;
+            line-height:20px;
+            background-color: #847373;
+            color:#fff;
+            border-radius: 4px;
+            border: 1px solid #333;
+            font-size:14px;
+            margin:10px;
+
+        }
+</style>
+
+
+</head>
+
+<body >
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid" style="width: 900px;height:50px ;">
+        <div class="navbar-header">
+            <a class="navbar-brand" >智能家居控制端</a>
+        </div>
+    </div>
+    <form class="collapse navbar-collapse" id="myheader" method="post">
+					<ul class="nav navbar-nav navbar-right " style="margin-right: 50px">
+						<li><a href={% url 'index' %}><span class="glyphicon glyphicon-home" id="home"></span>关于</a></li>
+						<li><a href={% url 'base' %}><span class="glyphicon glyphicon-user" id="face"></span> 首页 </a></li>
+                        <li><a href={% url 'chart' %}><span class="glyphicon glyphicon-eye-open" id="chart"></span> 查看温湿度 </a></li>
+						<li><a href={% url 'off' %}><span class="glyphicon glyphicon-off" id="off"></span> 退出 </a></li>
+					</ul>
+				</form>
+</nav>
+
+<div class="mycenter">
+    <form action="/look/" method="post">
+<div id="prat1">
+
+    <div align="left" style="float:left;margin-left:60px;margin-top: 180px; ">
+         <button type="submit" name='Wetter_On' class="open_button" onclick="func1()" >开加湿器</button>
+    </div>
+
+    <!--<form action="/look/" method="post"-->
+    <div align="right" style="float:right;margin-right:60px;margin-top:180px">
+        <button type="submit" name='Wetter_Off' class="close_button" onclick="func2()">关加湿器</button>
+    </div>
+    <div style="margin-top: 0;margin-left:280px" >
+        <button type="submit" name='Wetter_None' class="new_button" onclick="func3()">自动状态</button>
+    </div>
+    <div class="p">LED: {{ Wetter }}</div>
+    <img src="../static/img/led.png" style="margin-left: 50px;margin-top: 0" width="130" height="130">
+</div>
+
+<div id="prat2">
+    <div align="left" style="float:left;margin-left:60px;margin-top: 180px; ">
+         <button type="submit"  name='Door_On' class="open_button" onclick="func1()" >点我开门</button>
+    </div>
+
+    <div align="right" style="float:right;margin-right:60px;margin-top: 180px">
+        <button type="submit" name='Door_Off'  class="close_button" onclick="func2()">点我关门</button>
+    </div>
+    <div style="margin-top: 0;margin-left: 280px" >
+        <button type="submit" name='Door_None' class="new_button" onclick="func3()">自动状态</button>
+    </div>
+    <div class="p">Door: {{ Door }}</div>
+    <img src="../static/img/openDoor.png" style="margin-left: 50px;margin-top: 0" width="130" height="130">
+
+</div>
+<div id="prat3">
+    <div align="left" style="float:left;margin-left:60px;margin-top: 180px;  ">
+         <button type="submit"  name='Fan_On'  class="open_button" onclick="func1()">点我开扇</button>
+    </div>
+    <div align="right" style="float:right;margin-right:60px;margin-top: 180px">
+        <button type="submit"  name="Fan_Off" class="close_button" onclick="func2()">点我关扇</button>
+    </div>
+    <div style="margin-top: 0px;margin-left: 280px" >
+        <button type="submit" name='Fan_None' class="new_button" onclick="func3()">自动状态</button>
+    </div>
+    <div class="p">Fan: {{ Fan }}</div>
+    <img src="../static/img/openFan.png"  style="margin-left: 50px;margin-top: 0" width="130" height="130">
+</div>
+
+<div id="prat4">
+    <div align="left" style="float:left;margin-left:60px;margin-top: 168px;  ">
+         <button type="submit"  name="Curtain_Up" class="open_button" onclick="func1()">开窗帘</button>
+    </div>
+    <div align="right" style="float:right;margin-right:60px;margin-top: 180px">
+        <button type="submit"  name="Curtain_Down" class="close_button" onclick="func2()">关窗帘</button>
+    </div>
+    <div style="margin-top: 0;margin-left: 280px" >
+        <button type="submit" name='Curtain_None' class="new_button" onclick="func3()">自动状态</button>
+    </div>
+     <div class="p">Curtain: {{ Curtain }}</div>
+    <img src="../static/img/openCurtain.png" style="margin-left: 50px;margin-top: 0" width="130" height="130">
+</div>
+    </form>
+</div>
+</body>
+
+</html>
+
