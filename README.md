@@ -10,6 +10,8 @@
 
 指导老师：曾喻江
 
+### Tips: 由于Face的模型过大无法上传至github，如果需要欢迎issues
+### Tips: Due to the large size of our face model, it's hard to upload it to github. So welcome to issues if you need it.
 ## 家具部分
 
 * 风扇（小风扇模拟）
@@ -119,7 +121,7 @@
     cd ~/Desktop/Client
     python main.py
     ```
-10. Enjoy!!
+# Enjoy!!
 
 ## 文件结构树
 ```
