@@ -2,13 +2,9 @@
 
 ## 概述
 
-[这是华中科技大学电子信息与通信学院2018级硬件课程设计的一个项目](https://github.com/KeplerWang/SmartHomeSystem)
+[This is a project from the hardware design class of HUST EIC.](https://github.com/KeplerWang/SmartHomeSystem)
 
 基于树莓派、Django、socket、CNN、Ubuntu Server，本项目以''智能+家具+系统''的模式，实现了一个端到端的智能家具自控和人控系统。
-
-作者：王子辰（负责人）、饶龙、侯梁博
-
-指导老师：曾喻江
 
 ### Tips: 由于Face的模型过大无法上传至github，如果需要欢迎issues
 ### Tips: Due to the large size of our face model, it's hard to upload it to github. So welcome to issues if you need it.
@@ -126,7 +122,6 @@
 ## 文件结构树
 ```
 .
-├── 1.md
 ├── Client
 │   ├── FaceCollection.py
 │   ├── PiClient.py
@@ -311,5 +306,5 @@
         ├── login.html
         └── look.html
 
-51 directories, 133 files
+51 directories, 132 files
 ```
