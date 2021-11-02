@@ -180,43 +180,17 @@
 └── djangoProject
     ├── APP
     │   ├── __init__.py
-    │   ├── __pycache__
-    │   │   ├── __init__.cpython-38.pyc
-    │   │   ├── __init__.cpython-39.pyc
-    │   │   ├── admin.cpython-38.pyc
-    │   │   ├── admin.cpython-39.pyc
-    │   │   ├── apps.cpython-38.pyc
-    │   │   ├── apps.cpython-39.pyc
-    │   │   ├── models.cpython-38.pyc
-    │   │   ├── models.cpython-39.pyc
-    │   │   └── views.cpython-39.pyc
     │   ├── admin.py
     │   ├── apps.py
     │   ├── migrations
     │   │   ├── 0001_initial.py
     │   │   ├── __init__.py
-    │   │   └── __pycache__
-    │   │       ├── 0001_initial.cpython-38.pyc
-    │   │       ├── 0001_initial.cpython-39.pyc
-    │   │       ├── __init__.cpython-38.pyc
-    │   │       └── __init__.cpython-39.pyc
     │   ├── models.py
     │   ├── tests.py
     │   └── views.py
     ├── db.sqlite3
     ├── djangoProject
     │   ├── __init__.py
-    │   ├── __pycache__
-    │   │   ├── __init__.cpython-38.pyc
-    │   │   ├── __init__.cpython-39.pyc
-    │   │   ├── settings.cpython-38.pyc
-    │   │   ├── settings.cpython-39.pyc
-    │   │   ├── urls.cpython-38.pyc
-    │   │   ├── urls.cpython-39.pyc
-    │   │   ├── view.cpython-38.pyc
-    │   │   ├── views.cpython-38.pyc
-    │   │   ├── wsgi.cpython-38.pyc
-    │   │   └── wsgi.cpython-39.pyc
     │   ├── asgi.py
     │   ├── settings.py
     │   ├── urls.py
@@ -232,11 +206,7 @@
     │   │   │   ├── bootstrap.min.css.map
     │   │   │   └── weather.css
     │   │   ├── fonts
-    │   │   │   ├── glyphicons-halflings-regular.eot
-    │   │   │   ├── glyphicons-halflings-regular.svg
-    │   │   │   ├── glyphicons-halflings-regular.ttf
-    │   │   │   ├── glyphicons-halflings-regular.woff
-    │   │   │   └── glyphicons-halflings-regular.woff2
+    │   │   │   └── ...
     │   │   └── js
     │   │       ├── bootstrap.min.js
     │   │       ├── jquery.min.js
@@ -245,11 +215,7 @@
     │   │   ├── css
     │   │   │   └── bootstrap.min.css
     │   │   ├── fonts
-    │   │   │   ├── glyphicons-halflings-regular.eot
-    │   │   │   ├── glyphicons-halflings-regular.svg
-    │   │   │   ├── glyphicons-halflings-regular.ttf
-    │   │   │   ├── glyphicons-halflings-regular.woff
-    │   │   │   └── glyphicons-halflings-regular.woff2
+    │   │   │   └── ...
     │   │   └── js
     │   │       └── bootstrap.min.js
     │   ├── dashboard.css
@@ -259,40 +225,9 @@
     │   │   ├── css
     │   │   │   └── font-awesome.min.css
     │   │   └── fonts
-    │   │       ├── FontAwesome.otf
-    │   │       ├── fontawesome-webfont.eot
-    │   │       ├── fontawesome-webfont.svg
-    │   │       ├── fontawesome-webfont.ttf
-    │   │       ├── fontawesome-webfont.woff
-    │   │       └── fontawesome-webfont.woff2
+    │   │       └── ...
     │   ├── img
-    │   │   ├── EIC.jpg
-    │   │   ├── Wetter.png
-    │   │   ├── background1.jpeg
-    │   │   ├── closeCurtain.png
-    │   │   ├── closeDoor.png
-    │   │   ├── closeFan.png
-    │   │   ├── closeLED.png
-    │   │   ├── control.png
-    │   │   ├── curtain.jpg
-    │   │   ├── curtain.png
-    │   │   ├── door.png
-    │   │   ├── face.png
-    │   │   ├── fan.png
-    │   │   ├── favicon.ico
-    │   │   ├── home.png
-    │   │   ├── image1.jpg
-    │   │   ├── image2.jpg
-    │   │   ├── led.png
-    │   │   ├── login.png
-    │   │   ├── look.png
-    │   │   ├── openCurtain.png
-    │   │   ├── openDoor.png
-    │   │   ├── openFan.png
-    │   │   ├── openLED.png
-    │   │   ├── raspi.jpg
-    │   │   ├── sci.jpg
-    │   │   └── yinyang.svg
+    │   │   └── ...
     │   ├── jquery-3.3.1.min.js
     │   ├── my-style.css
     │   └── web_5
